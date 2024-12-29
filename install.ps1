@@ -21,12 +21,7 @@ Stop-Process -Name DiscordPTB -Force -ErrorAction SilentlyContinue
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 # Run the installer for Vencord
 Set-Location Vencord\
-pnpm install
-pnpm run build
-
-# Prompt user to select "Install Vencord" option
-Write-Output "Please select the 'Install Vencord' option in the installer."
-pnpm run inject
+powershell -ExecutionPolicy Bypass -Command "& { pnpm install; pnpm run build; pnpm run inject }"
 
 # Prompt installer should have completed successfully assuming you followed the instructions.
 Write-Output "If you followed the instructions correctly, the installer should have completed successfully."
