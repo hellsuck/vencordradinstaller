@@ -20,7 +20,7 @@ Stop-Process -Name DiscordCanary -Force -ErrorAction SilentlyContinue
 Stop-Process -Name DiscordPTB -Force -ErrorAction SilentlyContinue
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 # Run the installer for Vencord
-Set-Location Vencord\
+Set-Location vencordradiant\
 powershell -ExecutionPolicy Bypass -Command "& { pnpm install; pnpm run build; pnpm run inject }"
 
 # Prompt installer should have completed successfully assuming you followed the instructions.
