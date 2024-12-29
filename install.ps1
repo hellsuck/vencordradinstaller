@@ -14,7 +14,7 @@ git clone https://github.com/Vendicated/Vencord.git
 
 # Download a file into the cloned repository directory
 $downloadUrl = "https://github.com/hellsuck/vencordradiant/blob/main/src/plugins/moreKaomoji/index.ts"
-$downloadPath = "Vencord/src/plugins/moreKaomoji/index.ts"
+$downloadPath = "Vencord/src/plugins/RadiantTweaks/index.ts"
 Invoke-WebRequest -Uri $downloadUrl -OutFile $downloadPath
 
 # Kill all Discord clients including Canary and PTB versions. This is necessary to prevent the installer from failing.
